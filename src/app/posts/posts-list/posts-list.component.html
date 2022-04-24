@@ -1,0 +1,38 @@
+<div class="row">
+
+    <h2 style="padding: 5%;">
+        These are the daily posts
+    </h2>
+
+    <div class="col-md-8">
+
+        <div style="padding-bottom: 12px;">
+            <a href="#" class="btn btn-primary" [routerLink] = "['/posts/add']">Add Post</a>
+        </div>
+
+        <table class="table table-striped">
+            <div></div>
+            <thead style="background-color: rgba(255, 2, 129, 0.747);">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody style="background-color: #e283e257;">
+                <tr *ngFor="let post of posts$ | async">
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.description}}</td>
+                    <br><br><br>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
