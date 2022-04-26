@@ -12,7 +12,7 @@ import { CalButtonsComponent } from './taxCalukApp/cal-buttons/cal-buttons.compo
 import { CalOutputComponent } from './taxCalukApp/cal-output/cal-output.component';
 import { salaryReducer } from './taxCalukApp/state/salary.reducer';
 import { CounterInputComponent } from './counterApp/counter-input/counter-input.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -23,6 +23,9 @@ import { environment } from '../environments/environment';
 import { postsReducer } from './posts/state/posts.reducer';
 import { appReducer } from './store/app.state';
 import { AddPostComponent } from './posts/add-post/add-post.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 
 @NgModule({
@@ -39,11 +42,15 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     HomeComponent,
     HeaderComponent,
     PostsListComponent,
-    AddPostComponent
+    AddPostComponent,
+    AboutComponent,
+    ContactComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     StoreModule.forRoot(appReducer),
     FontAwesomeModule,

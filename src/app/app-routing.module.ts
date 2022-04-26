@@ -1,9 +1,12 @@
 import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AboutComponent } from "./about/about.component";
+import { ContactComponent } from "./contact/contact.component";
 import { CounterInputComponent } from "./counterApp/counter-input/counter-input.component";
 import { CounterComponent } from "./counterApp/counter/counter.component";
 import { HomeComponent } from "./home/home.component";
 import { AddPostComponent } from "./posts/add-post/add-post.component";
+import { EditPostComponent } from "./posts/edit-post/edit-post.component";
 import { PostsListComponent } from "./posts/posts-list/posts-list.component";
 
 
@@ -16,11 +19,21 @@ const routes : Routes = [
          
     },
     {
+        path : 'about', component : AboutComponent
+    },
+    {
+        path : 'contact', component : ContactComponent
+    },
+    {
          path : 'posts', component : PostsListComponent,
          children : [
              {
                  path : 'add', component : AddPostComponent
-             }
+             },
+             {
+                path : 'edit/:id', component : EditPostComponent
+            }
+            
          ]
     }
     
