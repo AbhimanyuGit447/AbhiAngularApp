@@ -6,7 +6,7 @@
            </h2>
            <hr>
 
-           <form [formGroup] = "postForm">
+           <form [formGroup] = "postForm" (ngSubmit) = "onSubmit()">
             <div class="mb-3">
                 <label>Title</label>
                 <input type="text" class="form-control" formControlName = "title" >
@@ -28,7 +28,7 @@
 
             <div class="my-3">
                 <button type="submit" class="btn btn-primary">
-                    Add Post
+                    Update Post
                 </button>
             </div>
         </form>
