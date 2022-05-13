@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaxCalComponent } from './tax-cal.component';
+import { LoadingSpinnerComponent } from './loading-spinner.component';
 
-describe('TaxCalComponent', () => {
-  let component: TaxCalComponent;
-  let fixture: ComponentFixture<TaxCalComponent>;
+describe('LoadingSpinnerComponent', () => {
+  let component: LoadingSpinnerComponent;
+  let fixture: ComponentFixture<LoadingSpinnerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaxCalComponent ]
+      declarations: [ LoadingSpinnerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaxCalComponent);
+    fixture = TestBed.createComponent(LoadingSpinnerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

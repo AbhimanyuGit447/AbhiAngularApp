@@ -1,9 +1,15 @@
+<div class="forHeader">
+    <app-header></app-header>
+</div>
 
-<app-header></app-header>
+<app-loading-spinner *ngIf = "showLoading | async"></app-loading-spinner>
 <div class="container">
     <div class="row">
 
-        <div class="col-md-12">
+        <div class="col-md-12 forContainer">
+            <div class="alert alert-danger forError" *ngIf = "errorMessage | async as error">
+                {{error}}
+            </div>
             <router-outlet></router-outlet>
         </div>
    

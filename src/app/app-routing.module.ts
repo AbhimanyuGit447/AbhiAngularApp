@@ -15,9 +15,10 @@ const routes : Routes = [
         path : '', component : HomeComponent
     },
     {
-        path : 'counterApp', component : CounterComponent,
-         
+        path : 'counterApp',
+        loadChildren : () => import('./counterApp/counter.module').then(m => m.CounterModule)
     },
+    
     {
         path : 'about', component : AboutComponent
     },
@@ -25,18 +26,13 @@ const routes : Routes = [
         path : 'contact', component : ContactComponent
     },
     {
-         path : 'posts', component : PostsListComponent,
-         children : [
-             {
-                 path : 'add', component : AddPostComponent
-             },
-             {
-                path : 'edit/:id', component : EditPostComponent
-            }
-            
-         ]
-    }
-    
+         path : 'posts',
+         loadChildren : () => import('./posts/posts.module').then(m => m.PostsModule)
+    },
+    {
+        path : 'auth',
+        loadChildren : () => import('./auth/auth.module').then((m) => m.AuthModule),
+    },  
  
 ];
 

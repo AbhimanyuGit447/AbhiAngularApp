@@ -3,8 +3,12 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { Post } from 'src/app/models/posts.model';
-import { AppState } from 'src/app/store/app.state';
+// import { Post } from 'src/app/models/posts.model';
+import {Post} from "../../models/posts.model"
+
+// import { AppState } from 'src/app/store/app.state';
+import {AppState} from "../../store/app.state"
+
 import { updatePost } from '../state/posts.actions';
 import { getPostById } from '../state/posts.selector';
 

@@ -1,0 +1,23 @@
+
+.forImageDiv{
+    display: flex;
+    align-items: center;
+}
+
+.forImage{
+    flex: 1;
+}
+
+.forLogin{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.container{
+    margin-left: 20px;
+    flex : 0 0 1;
+    justify-content: space-around;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl,  FormGroup, Validators } from '@angular/forms';
 import  {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 import { Store } from '@ngrx/store';
 import { Post } from 'src/app/models/posts.model';

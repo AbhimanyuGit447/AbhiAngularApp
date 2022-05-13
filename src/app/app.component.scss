@@ -112,3 +112,27 @@
       opacity: 0.6;
     }
   }
+
+
+  .forContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    text-align: center;
+  }
+
+  .forError{
+    flex-direction: column;
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 15%;
+    color: rgb(1, 2, 2);
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 0px;
+    padding-right: 0px;
+    flex: 1;
+    
+  }
+
+  

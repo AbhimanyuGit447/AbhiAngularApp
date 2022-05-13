@@ -1,4 +1,33 @@
 .context {
     position: absolute;
     z-index: 1;
+}
+
+
+
+:hover.forHover{
+    background-color: white;
+    color: white;
+    
+}
+
+@media(max-width : 995px){
+    .forHeader{
+        flex-direction: column;
+    
     }
+    .forNavbar{
+        
+        flex-direction: column;
+        margin: 10px;
+        box-shadow: 5px 5px 5px 5px rgb(211, 154, 216);
+        align-items: space-between;
+
+    }
+    a{
+        flex: 1;
+        align-items: flex-start;
+        box-shadow: 1px 1px 1px 1px rgb(216, 154, 167);
+    }
+
+}

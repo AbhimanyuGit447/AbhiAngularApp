@@ -1,17 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f3dcf3;">
+<nav class="navbar navbar-expand-lg navbar-light forHeader" style="background-color: #f3dcf3;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">CreativeMedia24x7</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav context"> 
+      <div class="navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav context forNavbar" > 
           <a class="nav-link active" aria-current="page" href="#" [routerLink] = "['/']">Home</a>&nbsp;
           <a class="nav-link" href="#">Services</a>&nbsp;
           <a class="nav-link" href = "#" [routerLink] = "['/counterApp']">CounterApp</a>&nbsp;
           <a class="nav-link" href = "#" [routerLink] = "['/posts']">Blog Posts</a>&nbsp;
           <a class="nav-link" href="#" [routerLink] = "['/contact']">Contact</a>&nbsp;
-          <a class="nav-link" href="#" [routerLink] = "['/about']">About</a>&nbsp;
+          <a class="nav-link" href="#" [routerLink] = "['/about']">About</a>&nbsp;&nbsp;&nbsp;
+          
+          <a *ngIf = "!(isAuthenticated$ | async)" class="forHover nav-link btn btn-info" href = "#" [routerLink] = "['/auth']">Login</a>&nbsp;&nbsp;
+          <a *ngIf = "!(isAuthenticated$ | async)" class="forHover nav-link btn btn-info" style="font-weight: bolder; font-size:larger; font-family:'Times New Roman', Times, serif;" href = "#" [routerLink] = "['/auth/signup']">SignUp</a>&nbsp;
+          <a *ngIf = "isAuthenticated$ | async" class="forHover nav-link btn btn-danger"  href = "#">Logout</a>&nbsp;&nbsp;
         </div>
       </div>
     </div>
